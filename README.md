@@ -6,19 +6,15 @@
 - Increment first list item by clicking it 3 times. Scroll to bottom and then scroll to top, the
   count will get reset
 
-# Functional/Product Requirement
+# Improvements
 
-- There should be 100 list items, each should be set at 0 initially and user can increment its
-  count.
-- The count incremented by user should be persisted when he scrolls the list.
-
-# Task:
-
-- Solve the functional requirement.
-- Review this file from Code Review perspective, list the issues and what changes should be made,
-  perform the changes to the file.
-- Think of it as a intern checked in this code and as a senior has to code review and fix the code
-  from implementation perspective to make it correct and efficient.
-- Send the fixed file back to the recruiter.
+- Scaffold was missing
+- To maintain the list state custom data class is required i.e. MyData here
+- Reverse the widget types i.e. make parent widget StatefulWidget
+- Use setState to the parent of this widget
+- Remove for loop from build method and add it to initState
+  otherwise that for loop gets called again and again after setState method called (in for loop we need to add data and not the widget)
+- For simple padding need to use Padding widget and not the Container widget
+- For plus button click, you need to use callback function or typedef
 
 # DONE
