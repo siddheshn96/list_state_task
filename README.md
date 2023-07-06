@@ -1,6 +1,6 @@
 # list_state_task
 
-# Description
+## Problem Description
 
 - Load ListWidget and run the app.
 - Increment first list item by clicking it 3 times. Scroll to bottom and then scroll to top, the
@@ -17,4 +17,19 @@
 - For simple padding need to use Padding widget and not the Container widget
 - For plus button click, you need to use callback function or typedef
 
-# DONE
+## Solution:
+
+- Load ListWidget and run the app.
+
+1. To load this listview properly, added Scaffold in the Parent List Widget
+
+- Increment first list item by clicking it 3 times. Scroll to bottom and then scroll to top, the count will get reset
+
+1. Convert List widget to Stateful widget
+2. Convert ListItem to Stateless widget
+3. Get callback from ListItem widget
+4. Use setState in List widget (parent widget)
+5. Created Custom class (i.e. MyData) to maintain a state after scroll
+6. Created a list of 100 element using MyData class in the initState method of the parent widget
+7. Assigned the value of MyData class to ListItem using list view builder according to the index
+8. Used the callback function to update the particular item according to the list index. 
